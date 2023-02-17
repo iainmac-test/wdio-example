@@ -4,7 +4,7 @@ import chai from 'chai';
 Given(/^Google page is opened$/, async () => {
     await console.log(`before openning browser`)
     await browser.url("https://www.google.com")
-    
+    // Select All Cookies
     let ele = await $('#L2AGLb')
     ele.click()
     await console.log(`After closing browser`)
