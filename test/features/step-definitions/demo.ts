@@ -29,3 +29,13 @@ Then(/^the URL should match (.*)$/, async function(expectedUrl) {
     let url = await browser.getUrl()
     chai.expect(url).to.equal(expectedUrl)
 })
+
+/** 
+ * Web Intercations
+ */
+
+Given(/^a web page is open$/, async () => {
+    await browser.url("https://www.the-internet.herokuapp.com")
+    await browser.setTimeout({implicit: 15000, pageLoad: 100000})
+    await browser.maximizeWindow()
+})
